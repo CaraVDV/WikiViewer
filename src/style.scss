@@ -1,1 +1,4 @@
-//style
+@import 'variables'; 
+@import 'flex';
+@import 'prefixMixin';
+//to use prefixes: @mixin prefix(property, value, prefix1 prefix2...);
