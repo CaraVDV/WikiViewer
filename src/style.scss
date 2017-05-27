@@ -57,7 +57,7 @@ input{
 	height: 2em;
 	border: .3em solid $accent;
 	border-radius: 2em;
-	transition: all .4s ease-in-out;
+	transition: all .5s ease-in-out;
 }
 .small{
 	width: 2em;
@@ -71,14 +71,18 @@ input{
 		height: 3em;
 		&:hover{
 		cursor: pointer;
-	}	&::after{
-		content: '';
-		position: absolute;
-		top: 78%;
-		left: 63%;
-		width: 1em;
-		height: 1em;
-		border-top: .4em solid $accent;
-		transform: rotate(45deg);
 	}
+}
+.tail{
+	position: absolute;
+	top: 77%;
+	left: 62%;
+	width: 1em;
+	height: 1em;
+	border-top: .4em solid $accent;
+	transform: rotate(45deg);
+	transition: all .2s ease-in-out;
+}
+.slide{
+	width: 0;
 }

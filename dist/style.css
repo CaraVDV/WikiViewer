@@ -52,7 +52,7 @@ input {
   height: 2em;
   border: 0.3em solid #70A9A1;
   border-radius: 2em;
-  transition: all .4s ease-in-out; }
+  transition: all .5s ease-in-out; }
 
 .small {
   width: 2em; }
@@ -66,12 +66,16 @@ input {
   height: 3em; }
   .icon:hover {
     cursor: pointer; }
-  .icon::after {
-    content: '';
-    position: absolute;
-    top: 78%;
-    left: 63%;
-    width: 1em;
-    height: 1em;
-    border-top: 0.4em solid #70A9A1;
-    transform: rotate(45deg); }
+
+.tail {
+  position: absolute;
+  top: 77%;
+  left: 62%;
+  width: 1em;
+  height: 1em;
+  border-top: 0.4em solid #70A9A1;
+  transform: rotate(45deg);
+  transition: all .2s ease-in-out; }
+
+.slide {
+  width: 0; }

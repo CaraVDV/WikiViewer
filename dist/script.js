@@ -10,13 +10,15 @@ $( document ).ready(function() {
 
 	function iconToBar(){
 		console.log("icon clicked.");
-		$("#search-bar").removeClass("small");
-		$(".icon").addClass("hide");
+		$(".tail").addClass("slide");
 		setTimeout(function(){
-			$("#x").removeClass("hide");
-			$("#search-input").removeClass("hide");
-		}, 400);
-		
+			$("#search-bar").removeClass("small");
+			$(".icon").addClass("hide");
+			setTimeout(function(){
+				$("#x").removeClass("hide");
+				$("#search-input").removeClass("hide");
+			}, 400);
+		}, 200);	
 	}
 
 	function barToIcon(){
@@ -26,6 +28,9 @@ $( document ).ready(function() {
 		$("#search-bar").addClass("small");
 		setTimeout(function(){
 			$(".icon").removeClass("hide");
-		}, 400);
+			setTimeout(function(){
+				$(".tail").removeClass("slide");
+			}, 50);
+		}, 450);
 	}
 });
