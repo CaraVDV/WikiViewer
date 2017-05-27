@@ -10,6 +10,7 @@ body{
 header{
 	position: relative;
 	display: flex;
+	min-width: 15em;
 	padding: 3em;
 	background-color: $primary;
 	color: $light;
