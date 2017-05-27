@@ -18,7 +18,8 @@ main {
   border-top: none; }
 
 a {
-  color: #70A9A1; }
+  color: #70A9A1;
+  text-decoration: none; }
   a:hover {
     color: #48E5C2; }
 
