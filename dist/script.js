@@ -17,7 +17,7 @@ $( document ).ready(function() {
 			setTimeout(function(){
 				$("#x").removeClass("hide");
 				$("#search-input").removeClass("hide");
-			}, 400);
+			}, 450);
 		}, 200);	
 	}
 

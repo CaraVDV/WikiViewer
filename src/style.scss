@@ -49,6 +49,11 @@ input{
 .hide{
 	display: none;
 }
+.wrapper{
+	position: relative;
+	height: 3em;
+	min-width: 3em;
+}
 .search{
 	display: flex;
 	align-items: center;
@@ -75,7 +80,7 @@ input{
 }
 .tail{
 	position: absolute;
-	top: 77%;
+	top: 65%;
 	left: 62%;
 	width: 1em;
 	height: 1em;
