@@ -1,4 +1,84 @@
 @import 'variables'; 
 @import 'flex';
-@import 'prefixMixin';
-//to use prefixes: @mixin prefix(property, value, prefix1 prefix2...);
+
+body{
+	background-color: $dark;	
+	color: $dark;
+	text-align: center;
+	font-size: 100%;
+}
+header{
+	position: relative;
+	display: flex;
+	padding: 3em;
+	background-color: $primary;
+	color: $light;
+}
+main{
+	background-color: $light;
+	color: $dark;
+	border: 2px solid $primary;
+	border-top: none;
+}
+a{
+	color: $accent;
+	&:hover{
+		color: $highlight;
+	}
+}
+button{
+	border: none;
+	background: none;
+}
+form{
+	flex-grow: 1;
+}
+input{
+	border: none;
+	background: none;
+	&::placeholder{
+		color: $faded;
+	}
+}
+.center{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate( -50%, -50%);
+}
+.hide{
+	display: none;
+}
+.search{
+	display: flex;
+	align-items: center;
+	margin: auto;
+	width: 14em;
+	height: 2em;
+	border: .3em solid $accent;
+	border-radius: 2em;
+	transition: all .4s ease-in-out;
+}
+.small{
+	width: 2em;
+}
+.icon{
+		position: absolute;
+		top:50%;
+		left:50%;
+		transform: translate(-50%, -50%);
+		width: 3em;
+		height: 3em;
+		&:hover{
+		cursor: pointer;
+	}	&::after{
+		content: '';
+		position: absolute;
+		top: 78%;
+		left: 63%;
+		width: 1em;
+		height: 1em;
+		border-top: .4em solid $accent;
+		transform: rotate(45deg);
+	}
+}

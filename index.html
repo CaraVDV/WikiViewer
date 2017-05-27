@@ -11,17 +11,26 @@
 		<link rel="stylesheet" href="dist/normalize.css">
 
 	<!-- External Javascript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="dist/script.js"></script>
 
 	</head>
 
 	<body>	
-		<div class="center">
-			<p><a href="#">Click here for a random article.</a></p>
-			<div class="icon" id="search">
+		<header class="center">
+			<p><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Click here</a> for a random article.</p>
+			<div class="icon"></div>
+			<div class="search small" id="search-bar">
+				<form class="hide" id="search-input">
+					<input type="text" name="search" placeholder="Search Wikipedia">
+				</form>
+				<button class="close hide" id="x">X</button>
 			</div>
-			<p> Click the icon to search for a topic.</p>
-		</div>
+			<p id="instruct"> Click the icon to search for a topic.</p>
+		</header>
+		<main class="hide">
+			Wiki Articles Go Here!  
+		</main>
 	</body>
 
 </html>
