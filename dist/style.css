@@ -6,6 +6,8 @@ body {
 
 header {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   min-width: 15em;
   padding: 1em;
@@ -13,9 +15,18 @@ header {
   color: #E6E4E3; }
 
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
   align-items: stretch;
   color: #333;
   border-top: none;
@@ -38,18 +49,27 @@ button {
   border: none;
   background: none; }
   button:active {
+    -webkit-transform: translateY(2px);
     transform: translateY(2px); }
 
 form {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1; }
 
 input {
   border: none;
   background: none; }
+  input::-webkit-input-placeholder {
+    color: #999; }
+  input:-ms-input-placeholder {
+    color: #999; }
   input::placeholder {
     color: #999; }
 
 .preview {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: #E6E4E3;
   margin: .2em;
@@ -62,6 +82,8 @@ input {
 
 .text {
   margin-left: .5em;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1; }
 
 .desc {
@@ -72,6 +94,7 @@ input {
   padding: 3em;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
 
 .hide {
@@ -83,13 +106,18 @@ input {
   min-width: 3em; }
 
 .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin: auto;
   width: 14em;
   height: 2em;
   border: 0.3em solid #70A9A1;
   border-radius: 2em;
+  -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out; }
 
 .small {
@@ -99,6 +127,7 @@ input {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 3em;
   height: 3em; }
@@ -112,7 +141,9 @@ input {
   width: 1em;
   height: 1em;
   border-top: 0.4em solid #70A9A1;
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out; }
 
 .slide {
