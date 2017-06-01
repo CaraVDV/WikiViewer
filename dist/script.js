@@ -38,6 +38,12 @@ function findWikiArticles(event){
 	event.preventDefault();
 	var apiUrl;
 	var searchStr = $('#search-input').val();
+
+	if($('header').hasClass('center')){
+		$('header').removeClass('center');
+		$('#instruct').addClass('hide');
+	}
+
 	console.log("Search submitted for " + searchStr);
 	apiUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&search='+searchStr+'&limit=10&namespace=0&format=json&callback=?';
 	console.log(apiUrl);

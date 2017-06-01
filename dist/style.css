@@ -58,7 +58,7 @@ input {
     border-left: 0.3em solid #70A9A1;
     color: #333; }
   .preview:active {
-    border-left: 0.3em solid #AFCFCB; }
+    border-left: 0.3em solid #70A9A1; }
 
 .text {
   margin-left: .5em;
