@@ -17,23 +17,22 @@
 	</head>
 
 	<body>	
-		<header class="center">
+		<header> <!--class="center"-->
 			<p><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Click here</a> for a random article.</p>
 
 			<div class="wrapper">
 				<div class="icon"><div class="tail"></div></div>
 				<div class="search small" id="search-bar">
-					<form class="hide" id="search-input">
-						<input type="text" name="search" placeholder="Search Wikipedia">
+					<form autocomplete="off" class="hide" id="search-form">
+						<input id="search-input" type="text" name="search" placeholder="Search Wikipedia">
 					</form>
 					<button class="close hide" id="x">X</button>
 				</div>
 			</div>
 
-			<p id="instruct"> Click the icon to search for a topic.</p>
+			<p class="hide" id="instruct"> Click the icon to search for a topic.</p> <!-- remove hide from inst-->
 		</header>
-		<main class="hide">
-			Wiki Articles Go Here!  
+		<main id="wiki-list"> <!-- add hide -->
 		</main>
 	</body>
 
