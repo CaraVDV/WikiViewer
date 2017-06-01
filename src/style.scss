@@ -46,7 +46,8 @@ button{
 	}
 }
 form{
-	flex-grow: 1;
+	flex: auto;
+	min-width: 0;
 }
 input{
 	border: none;
