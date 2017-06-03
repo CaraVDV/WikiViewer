@@ -22,6 +22,11 @@ $( document ).ready(function() {
 	}
 
 	function barToIcon(){
+		if($('#instruct').hasClass('hide')){
+			$('#wiki-list').empty();
+			$('header').addClass('center');
+			$('#instruct').removeClass('hide');
+		}
 		console.log("x button clicked.");
 		$("#x").addClass("hide");
 		$("#search-form").addClass("hide");
@@ -57,10 +62,16 @@ function findWikiArticles(event){
 
 function generateList(json){
 	for( var i=0; i < json[1].length; i++){
+		///finds appropriate thumbnail
+		var thumbUrl = 'https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&titles='+json[1][i]+'&format=json&callback=?';
+		$.getJSON(thumbUrl, function(thumbJson){
+			console.log(thumbJson);
+		});
+		//creates list
 		$('#wiki-list').append(
 				'<a class=\"preview\" href=\"'+json[3][i]+'\" target=\"_blank\">'
 				+' <div class=\"text\"><h2>' +json[1][i]+ '</h2> '
-				+' <p class=\"desc\">' +json[2][i]+ '</p></div>'
+				+' <p class=\"desc\">' +json[2][i]+ '</p></div></a>'
 			);
 	};
 }
